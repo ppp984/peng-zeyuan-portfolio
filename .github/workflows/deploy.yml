@@ -43,4 +43,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-# Asset-path refresh: 2026-09-20
+# Visual video refresh: 2026-09-20
