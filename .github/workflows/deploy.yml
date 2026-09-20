@@ -24,7 +24,9 @@ jobs:
       - name: Download portfolio bundle
         run: |
           mkdir site
-          curl -fL --retry 3 https://peng-zeyuan-portfolio.salty-ball-2088.chatgpt.site/github-pages-site.tar.gz -o site.tar.gz
+          curl -fL --retry 3 https://peng-zeyuan-portfolio.salty-ball-2088.chatgpt.site/github-pages-site.tar.gz.part-aa -o site.part-aa
+          curl -fL --retry 3 https://peng-zeyuan-portfolio.salty-ball-2088.chatgpt.site/github-pages-site.tar.gz.part-ab -o site.part-ab
+          cat site.part-aa site.part-ab > site.tar.gz
           tar -xzf site.tar.gz -C site
 
       - name: Configure Pages
